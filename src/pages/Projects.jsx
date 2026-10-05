@@ -13,13 +13,12 @@ const Projects = () => {
           Projects
         </span>
       </h1>
-      <div className="MT-5 flex flex-col gap-3 text-slate-500">
+      <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          During my journey as a final-year student and through a two-month
-          internship, I’ve developed several projects to sharpen my skills.
-          These highlighted works represent the ideas I’m most excited about,
-          and I’m always open to sharing and improving them further with new
-          perspectives.
+          A selection of projects I’ve built to strengthen my skills in software
+          engineering and modern web development. From frontend interfaces to
+          full-stack applications, these projects showcase my technical growth,
+          problem-solving approach, and passion for building practical products.
         </p>
       </div>
       <div className="flex flex-wrap my-20 gap-16">
@@ -39,36 +38,74 @@ const Projects = () => {
               <h4 className="text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p className="mt-2 text-slate-500">{project.description}</p>
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link
-                  to={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
-                >
-                  Live Link
-                </Link>
-                <img
-                  src={arrow}
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
-              </div>
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link
-                  to={project.sourceCode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
-                >
-                  Source Code
-                </Link>
-                <img
-                  src={arrow}
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
+
+              {/* Context-Driven Tech Stack Badges */}
+              {project.tags && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 text-xs font-medium font-poppins rounded-md bg-blue-50 text-blue-700 border border-blue-200/60"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <p className="mt-3 text-slate-500">{project.description}</p>
+              <div className="mt-5 flex flex-col gap-3 font-poppins">
+                {project.link && (
+                  <div className="flex items-center gap-2">
+                    <Link
+                      to={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-blue-600"
+                    >
+                      {project.linkText || "Live Link"}
+                    </Link>
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className="w-4 h-4 object-contain"
+                    />
+                  </div>
+                )}
+                {project.sourceCode && (
+                  <div className="flex items-center gap-2">
+                    <Link
+                      to={project.sourceCode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-blue-600"
+                    >
+                      {project.sourceCodeText || "Source Code"}
+                    </Link>
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className="w-4 h-4 object-contain"
+                    />
+                  </div>
+                )}
+                {project.backendSourceCode && (
+                  <div className="flex items-center gap-2">
+                    <Link
+                      to={project.backendSourceCode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-blue-600"
+                    >
+                      {project.backendSourceCodeText || "Backend API"}
+                    </Link>
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className="w-4 h-4 object-contain"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -33,32 +33,24 @@ import {
   typescript,
   movie,
   furniture,
+  taskly,
 } from "../assets/icons";
 
 export const skills = [
+  // Frontend & UI
   {
-    imageUrl: css,
-    name: "CSS",
+    imageUrl: react,
+    name: "React.js",
     type: "Frontend",
   },
   {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
+    imageUrl: nextjs,
+    name: "Next.js",
+    type: "Frontend",
   },
   {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-  },
-  {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
-  },
-  {
-    imageUrl: html,
-    name: "HTML",
+    imageUrl: typescript,
+    name: "TypeScript",
     type: "Frontend",
   },
   {
@@ -67,43 +59,13 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
-  },
-  // {
-  //   imageUrl: motion,
-  //   name: "Motion",
-  //   type: "Animation",
-  // },
-  // {
-  //   imageUrl: mui,
-  //   name: "Material-UI",
-  //   type: "Frontend",
-  // },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
-  {
-    imageUrl: react,
-    name: "React",
-    type: "Frontend",
-  },
-  {
     imageUrl: redux,
     name: "Redux",
-    type: "State Management",
+    type: "Frontend",
   },
   {
-    imageUrl: sass,
-    name: "Sass",
+    imageUrl: mui,
+    name: "Material-UI",
     type: "Frontend",
   },
   {
@@ -112,13 +74,65 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: typescript,
-    name: "TypeScript",
+    imageUrl: html,
+    name: "HTML5",
     type: "Frontend",
+  },
+  {
+    imageUrl: css,
+    name: "CSS3",
+    type: "Frontend",
+  },
+  {
+    imageUrl: sass,
+    name: "Sass",
+    type: "Frontend",
+  },
+
+  // Backend & Database
+  {
+    imageUrl: nodejs,
+    name: "Node.js",
+    type: "Backend",
+  },
+  {
+    imageUrl: express,
+    name: "Express.js",
+    type: "Backend",
+  },
+  {
+    imageUrl: mongodb,
+    name: "MongoDB",
+    type: "Backend",
+  },
+
+  // Tools & Version Control
+  {
+    imageUrl: git,
+    name: "Git",
+    type: "Tools",
+  },
+  {
+    imageUrl: github,
+    name: "GitHub",
+    type: "Tools",
   },
 ];
 
 export const experiences = [
+  {
+    title: "Intern Frontend Developer",
+    company_name: "Apps Cyclone Technology JSC",
+    icon: ac_jsc,
+    iconBg: "#accbe1",
+    date: "December 2025 - January 2026",
+    points: [
+      "Developed and optimized responsive web interfaces using React.js and Tailwind CSS, ensuring high-quality UI/UX across various devices.",
+      "Integrated RESTful APIs to handle dynamic data rendering and improved application performance.",
+      "Participated in daily stand-ups and code reviews with the development team to ensure code quality and adhere to project timelines.",
+      "Resolved UI bugs and cross-browser compatibility issues, enhancing the overall user experience of the product.",
+    ],
+  },
   {
     title: "Intern Frontend Developer",
     company_name: "Titan Technology Corporation",
@@ -130,19 +144,6 @@ export const experiences = [
       "Assisted in integrating APIs and implementing page routing, ensuring smooth data flow between front-end and back-end.",
       "Worked closely with senior developers to improve layout consistency, responsive behavior, and code structure.",
       "Gained hands-on experience with version control, collaborative workflow, and front-end optimization techniques.",
-    ],
-  },
-  {
-    title: "Intern Frontend Developer",
-    company_name: "Apps Cyclone Technology JSC",
-    icon: ac_jsc,
-    iconBg: "#accbe1",
-    date: "December 2025 - january 2026",
-    points: [
-      "Developed and optimized responsive web interfaces using React.js and Tailwind CSS, ensuring high-quality UI/UX across various devices.",
-      "Integrated RESTful APIs to handle dynamic data rendering and improved application performance.",
-      "Participated in daily stand-ups and code reviews with the development team to ensure code quality and adhere to project timelines.",
-      "Resolved UI bugs and cross-browser compatibility issues, enhancing the overall user experience of the product.",
     ],
   },
   // {
@@ -195,7 +196,7 @@ export const socialLinks = [
   {
     name: "GitHub",
     iconUrl: github,
-    link: "https://github.com/YourGitHubUsername",
+    link: "https://github.com/tphatwebdev",
   },
   {
     name: "LinkedIn",
@@ -206,9 +207,33 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: taskly,
+    theme: "btn-back-blue",
+    name: "Taskly (Full-stack Kanban Platform)",
+    tags: [
+      "React 19",
+      "Redux Toolkit",
+      "Material-UI",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "@dnd-kit",
+    ],
+    description:
+      "Engineered an enterprise-grade collaborative Kanban platform inspired by Trello with React 19, Redux Toolkit, Material-UI, Node.js, Express, Socket.io, and MongoDB Native Driver. Features @dnd-kit multi-directional drag-and-drop, MongoDB multi-stage aggregation pipelines, dual JWT authentication (HttpOnly cookies with silent refresh queueing), real-time notifications, and zero-disk media streaming to Cloudinary. Deployed with Vercel (frontend) and Render (backend).",
+    link: "https://trello-clone-eight-chi.vercel.app",
+    linkText: "Live Link",
+    sourceCode: "https://github.com/tphatwebdev/Trello_Clone",
+    sourceCodeText: "Frontend Code",
+    backendSourceCode: "https://github.com/tphatwebdev/Trello_Clone_API",
+    backendSourceCodeText: "Backend API",
+  },
+  {
     iconUrl: movie,
     theme: "btn-back-red",
     name: "Movie Trailer Website",
+    tags: ["React.js", "Tailwind CSS", "Vite", "RESTful API", "Vercel"],
     description:
       "Developed a movie-trailer web app with ReactJS and TailwindCSS, featuring a smooth search experience and fast page loading. Deployed on Vercel, ensuring optimal performance and responsive UI across devices.",
     link: "https://fe-movie-trailer.vercel.app/",
@@ -218,6 +243,15 @@ export const projects = [
     iconUrl: furniture,
     theme: "btn-back-green",
     name: "Furniture Website (Full-stack)",
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Auth",
+      "Render",
+      "Vercel",
+    ],
     description:
       "Created a full-stack furniture e-commerce platform with ReactJS, NodeJS, Express, and MongoDB. Implemented user authentication, CRUD operations, and RESTful APIs, deployed with Render (backend) and Vercel (frontend)",
     link: "https://interior-rho-woad.vercel.app/login",

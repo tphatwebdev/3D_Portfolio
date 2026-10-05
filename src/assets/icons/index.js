@@ -28,6 +28,7 @@ import soundon from "./soundon.png";
 import soundoff from "./soundoff.png";
 import movie from "./movie.svg";
 import furniture from "./furniture.svg";
+import taskly from "./taskly.svg";
 
 export {
   css,
@@ -60,4 +61,5 @@ export {
   soundoff,
   movie,
   furniture,
+  taskly,
 };

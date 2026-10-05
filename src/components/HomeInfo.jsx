@@ -15,13 +15,13 @@ const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, I am <span className="font-semibold">Trần Tiến Phát</span>👋
-      <br />A Web Developer
+      <br />A Software Engineer
     </h1>
   ),
   2: (
     <InfoBox
       text={
-        "Eager to grow as a software engineer, with internship experience and a passion for learning new technologies."
+        "Software Engineering graduate with hands-on internship experience, passionate about building real-world applications and continuously improving my skills."
       }
       link="/about"
       btnText={"Learn more"}
@@ -30,7 +30,7 @@ const renderContent = {
   3: (
     <InfoBox
       text={
-        "Worked on multiple projects during my internship and personal learning journey. Want to see what I’ve built?"
+        "Explore the projects I’ve built to sharpen my skills, solve real-world problems, and bring ideas to life."
       }
       link="/projects"
       btnText={"Visit my portfolio"}
@@ -39,7 +39,7 @@ const renderContent = {
   4: (
     <InfoBox
       text={
-        "Got an idea or need a dev? Let’s make it happen — I’m just one message away"
+        "Interested in working together or have an opportunity in mind? Let’s connect and start a conversation."
       }
       link="/contact"
       btnText={"Let's talk"}
